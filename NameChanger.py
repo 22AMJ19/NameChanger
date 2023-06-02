@@ -4,7 +4,6 @@ from tkinter import ttk
 from tkinter import messagebox
 from tkinter import filedialog
 
-global f 
 f = open('ComparisonTable.txt', 'r', encoding='UTF-8')
 data = f.read()
 INTAB, OUTTAB = data.splitlines()
