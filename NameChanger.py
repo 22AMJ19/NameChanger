@@ -44,7 +44,7 @@ def convertImage(imgPath):
             os.rename(os.path.join(imgPath, webpf), os.path.join(imgPath, webpf.translate(webpf.maketrans(OUTTAB, INTAB))))
             # print(imgPath + webpf)
         os.rename(imgPath, os.path.join(os.path.dirname(imgPath), os.path.basename(imgPath).translate(os.path.basename(imgPath).maketrans(OUTTAB, INTAB))))
-        print (os.path.basename(imgPath))
+        # print (os.path.basename(imgPath))
 
 #全フォルダ時の再帰処理用
 def renamer (imgPath):
