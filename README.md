@@ -17,7 +17,7 @@
 ## 使用方法
 1. `NameChanger.py`を実行する。
 2. 対象のラジオボタンから変更したい対象を選択する。
-    ![](https://raw.githubusercontent.com/22AMJ19/NameChanger/media/images/2023-06-02.png)
+![](https://raw.githubusercontent.com/22AMJ19/NameChanger/media/images/2023-06-02.png)
 3. ファイルを選択すると、一つのファイルの名前を変更する。
 4. フォルダを選択すると、選択したフォルダとそのフォルダの中のフォルダ・ファイルを変換する。
 5. 全フォルダを選択すると、選択したフォルダとその中にあるフォルダ内部のファイルを含め、フォルダ・ファイルをすべて変更する。
