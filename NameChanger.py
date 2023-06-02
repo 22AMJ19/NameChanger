@@ -6,7 +6,7 @@ from tkinter import filedialog
 
 f = open('ComparisonTable.txt', 'r', encoding='UTF-8')
 data = f.read()
-INTAB, OUTTAB = data.splitlines()
+OUTTAB, INTAB = data.splitlines()
 
 def check_B ():
     if (v1.get()=='B'):
@@ -33,16 +33,16 @@ def convertImage(imgPath):
         # os.rename(imgPath, imgPath.translate(imgPath.maketrans(OUTTAB, INTAB))) # これだと全部変換しちゃうので/以降を変更するようにする
         dirname = os.path.dirname(imgPath)
         basename = os.path.basename(imgPath)
-        os.rename(imgPath, os.path.join(dirname, basename.translate(basename.maketrans(OUTTAB, INTAB))))
+        os.rename(imgPath, os.path.join(dirname, basename.translate(basename.maketrans(INTAB, OUTTAB))))
         # print(basename.translate(basename.maketrans(OUTTAB, INTAB)))
     elif (v1.get()=='C'):
         renamer(imgPath)
-        os.rename(imgPath, os.path.join(os.path.dirname(imgPath), os.path.basename(imgPath).translate(os.path.basename(imgPath).maketrans(OUTTAB, INTAB))))
+        os.rename(imgPath, os.path.join(os.path.dirname(imgPath), os.path.basename(imgPath).translate(os.path.basename(imgPath).maketrans(INTAB, OUTTAB))))
     else: # フォルダ
         for webpf in os.listdir(imgPath):
-            os.rename(os.path.join(imgPath, webpf), os.path.join(imgPath, webpf.translate(webpf.maketrans(OUTTAB, INTAB))))
+            os.rename(os.path.join(imgPath, webpf), os.path.join(imgPath, webpf.translate(webpf.maketrans(INTAB, OUTTAB))))
             # print(imgPath + webpf)
-        os.rename(imgPath, os.path.join(os.path.dirname(imgPath), os.path.basename(imgPath).translate(os.path.basename(imgPath).maketrans(OUTTAB, INTAB))))
+        os.rename(imgPath, os.path.join(os.path.dirname(imgPath), os.path.basename(imgPath).translate(os.path.basename(imgPath).maketrans(INTAB, OUTTAB))))
         # print (os.path.basename(imgPath))
 
 #全フォルダ時の再帰処理用
@@ -50,7 +50,7 @@ def renamer (imgPath):
     for webpf in os.listdir(imgPath):
         if (os.path.isdir(os.path.join(imgPath, webpf))):
             renamer(os.path.join(imgPath, webpf))
-        os.rename(os.path.join(imgPath, webpf), os.path.join(imgPath, webpf.translate(webpf.maketrans(OUTTAB, INTAB))))
+        os.rename(os.path.join(imgPath, webpf), os.path.join(imgPath, webpf.translate(webpf.maketrans(INTAB, OUTTAB))))
         # print(imgPath + webpf)
     # os.rename(imgPath, os.path.join(os.path.dirname(imgPath), os.path.basename(imgPath).translate(os.path.basename(imgPath).maketrans(OUTTAB, INTAB))))
    
