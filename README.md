@@ -11,7 +11,7 @@
 ## ファイル説明
 
 - `NameChanger.py`
-    ファイルの前を変更するプログラム。
+    ファイルの名前を変換するプログラム。
 - `ScrapingComparisonTables.py`
     [対応表のサイト](http://gigadict.com/JxCsCode.htm)から対応表スクレイピングし、`ComparisonTable.txt`を作成する
 - `ComparisonTable.txt`
