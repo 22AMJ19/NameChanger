@@ -11,12 +11,18 @@
 ## ファイル説明
 
 - `NameChanger.py`
+
     ファイルの名前を変換するプログラム。
+
 - `ScrapingComparisonTables.py`
+
     [対応表のサイト](http://gigadict.com/JxCsCode.htm)から対応表スクレイピングし、`ComparisonTable.txt`を作成する
+
 - `ComparisonTable.txt`
+
     `ScrapingComparisonTables.py`で作成した対応表。
-    
+
+
 ## 使用方法
 
 1. `NameChanger.py`を実行する。
