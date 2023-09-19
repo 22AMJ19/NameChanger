@@ -4,7 +4,7 @@
 
 ## 実行環境
 
-- pyuthon v3.10.4
+- python v3.10.4
 - urllib3 v1.26.14
 - beautifulsoup4 v4.11.2
 
